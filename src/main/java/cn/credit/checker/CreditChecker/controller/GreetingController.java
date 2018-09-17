@@ -19,4 +19,9 @@ public class GreetingController {
         return new Greeting(counter.incrementAndGet(),
                             String.format(template, name));
     }
+    
+    @RequestMapping("/status")
+    public String status() {
+        return "UP";
+    }
 }
