@@ -1,4 +1,4 @@
-package cn.credit.checker.CreditChecker.domain;
+package cn.credit.checker.CreditChecker.model;
 
 public class Greeting {
 

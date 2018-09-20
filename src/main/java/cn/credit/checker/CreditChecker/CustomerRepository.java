@@ -4,7 +4,7 @@ import java.util.List;
 
 import org.springframework.data.repository.CrudRepository;
 
-import cn.credit.checker.CreditChecker.domain.Customer;
+import cn.credit.checker.CreditChecker.model.Customer;
 
 public interface CustomerRepository extends CrudRepository<Customer, Long> {
 
