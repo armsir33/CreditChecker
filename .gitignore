@@ -26,3 +26,4 @@
 /.nb-gradle/
 /settings.gradle
 /.DS_Store
+/bin/
