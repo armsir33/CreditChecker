@@ -1,4 +1,4 @@
-package cn.credit.checker.CreditChecker;
+package cn.credit.checker.CreditChecker.repository;
 
 import java.util.List;
 

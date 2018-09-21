@@ -26,7 +26,9 @@ repositories {
 
 dependencies {
 	//compile('org.apache.cxf:cxf-spring-boot-starter-jaxrs:3.2.5')
-	compile("org.springframework.boot:spring-boot-starter-web") 
+	compile("org.springframework.boot:spring-boot-starter-web")
+	compile('org.springframework.boot:spring-boot-starter-log4j2')
+	
 	compile("org.springframework.boot:spring-boot-starter-data-jpa")
 	compile("org.springframework.boot:spring-boot-starter-actuator")
 	compile("org.springframework.boot:spring-boot-starter-thymeleaf")
@@ -39,13 +41,14 @@ dependencies {
 	
     runtime("com.h2database:h2")
     
-    compile group: 'org.slf4j', name:'slf4j-api', version: '1.7.25'
-	compile group: 'org.apache.logging.log4j', name: 'log4j-slf4j-impl', version: '2.11.1'
-    compile group: 'org.apache.logging.log4j', name: 'log4j-api', version: '2.11.1'
-	compile group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.11.1'
-    
 	testCompile("junit:junit")
     testCompile("org.springframework.boot:spring-boot-starter-test")
     testCompile("org.springframework.security:spring-security-test")
     
+}
+
+configurations {
+    all*.exclude module: 'spring-boot-starter-logging'
+    all*.exclude module: 'logback-classic'
+    all*.exclude module: 'log4j-over-slf4j'
 }
