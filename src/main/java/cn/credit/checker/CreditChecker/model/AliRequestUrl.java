@@ -1,6 +1,6 @@
-package cn.credit.checker.CreditChecker.dto;
+package cn.credit.checker.CreditChecker.model;
 
-public class AliRequest {
+public class AliRequestUrl {
 	protected String appId;
 	protected String method;
 	protected String format;

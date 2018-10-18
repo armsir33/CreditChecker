@@ -1,15 +1,26 @@
-package cn.credit.checker.CreditChecker.dto;
+package cn.credit.checker.CreditChecker.model;
 
 import java.net.URI;
 import java.net.URISyntaxException;
 
 import org.apache.http.client.utils.URIBuilder;
 
-public abstract class AliRequestUriBuilder {
-	
+public abstract class AliRequestUrlBuilder {
+
+	protected String appId;
+	protected String method;
+	protected String format;
+	protected String charset;
+	protected String signType;
+	protected String sign;
+	protected String timestamp;
+	protected String version;
+	protected String appAuthToken;
+	protected String bizContent;
+
 	protected URIBuilder builder = new URIBuilder();
 	
-	public abstract URI build() throws URISyntaxException; 
+	public abstract URI build() throws URISyntaxException;
 	
 	public void appId(final String appId) {
 		builder.setParameter("app_id", appId);
