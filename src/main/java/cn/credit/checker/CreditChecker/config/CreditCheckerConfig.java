@@ -12,6 +12,7 @@ import org.slf4j.LoggerFactory;
 import java.io.File;
 import java.util.concurrent.TimeUnit;
 
+@Deprecated
 public class CreditCheckerConfig {
 
     private static final Logger LOG = LoggerFactory.getLogger(CreditCheckerConfig.class);
@@ -25,7 +26,7 @@ public class CreditCheckerConfig {
     }
 
     public static CreditCheckerConfig create() {
-        LOG.debug("create CreditChecker");
+        LOG.debug("create CreditCheckerConfig");
         Parameters params = new Parameters();
         File propertiesFile = new File(PROPERTY_FILE_PATH);
 
@@ -43,6 +44,7 @@ public class CreditCheckerConfig {
         try {
             return this.builder.getConfiguration().getString(key, "");
         } catch (ConfigurationException e) {
+            LOG.warn("FAILED to fetch configuration");
             throw new RuntimeException("FAILED to fetch configuration", e);
         }
     }

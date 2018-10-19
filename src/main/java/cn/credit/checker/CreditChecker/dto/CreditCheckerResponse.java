@@ -1,9 +1,19 @@
 package cn.credit.checker.CreditChecker.dto;
 
-public class CreditCheckerRequest {
+public class CreditCheckerResponse {
+
+    private String appId;
     private String productCode;
     private String contractName;
     private String contractFile;
+
+    public String getAppId() {
+        return appId;
+    }
+
+    public void setAppId(final String appId) {
+        this.appId = appId;
+    }
 
     public String getProductCode() {
         return productCode;

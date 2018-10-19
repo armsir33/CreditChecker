@@ -1,6 +1,8 @@
-package cn.credit.checker.CreditChecker.config;
+package cn.credit.checker.CreditChecker.service;
 
-public class AliConfig {
+public class AliServiceConstants {
+
+	private AliServiceConstants() {}
 
 	public static final String ZHIMA_CONTRACT_INITIALIZE = "zhima.customer.contract.initialize";
 	
