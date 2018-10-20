@@ -9,7 +9,17 @@ import org.springframework.context.annotation.PropertySource;
 @ConfigurationProperties
 public class CreditCheckerConfigProperty {
 
+    private String gateway;
     private String appId;
+    private String productCode;
+
+    public String getGateway() {
+        return gateway;
+    }
+
+    public void setGateway(final String gateway) {
+        this.gateway = gateway;
+    }
 
     public String getAppId() {
         return appId;
@@ -17,5 +27,13 @@ public class CreditCheckerConfigProperty {
 
     public void setAppId(final String appId) {
         this.appId = appId;
+    }
+
+    public String getProductCode() {
+        return productCode;
+    }
+
+    public void setProductCode(final String productCode) {
+        this.productCode = productCode;
     }
 }
